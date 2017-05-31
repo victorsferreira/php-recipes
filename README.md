@@ -27,3 +27,16 @@ call_user_func_array($closure,$arguments);
 ```
 
 `$this` is the current context and we want to change it to `object` context.
+
+Enabling CORS
+
+```php
+ header("Access-Control-Allow-Origin: *");
+```
+
+Reading form payload as JSON
+
+```php
+$json = file_get_contents('php://input');
+$obj = json_decode($json, TRUE);
+```
